@@ -41,7 +41,7 @@ a {
 .container{
     margin: 0 auto;
     padding: 0.5rem;
-    width: 100%;
+    width: 90%;
 }
 
 section {
@@ -135,6 +135,7 @@ header.banner{
 }
 
 header.banner>h1 {
+    width: fit-content;
     font-size: 5rem;
     margin-bottom: 1rem;
     text-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.5);
@@ -154,7 +155,7 @@ section>header{
 
 .card_container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 1rem;
 }
 
@@ -186,26 +187,33 @@ article.card.content{
     justify-content: center;
     align-items: center;
 }
+#form-container{
+    width:90%;
+    display: flex;
+    justify-content: center;
+}
 
 form {
+    width: 90%;
+    max-width: 50rem;
     display: grid;
     grid-template-rows: auto auto auto;
     grid-gap: 0.5rem;
     background-color: #38164d;
     box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
-    width:fit-content;
     border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 10rem;
+    padding:1rem;
 }
 .in{
-    width: 15rem;
+    width: 100%;
+    max-width: 15rem;
     padding: 0.5rem;
     border-radius: 10px;
     border: #291038;
 }
-form>textarea{
-    width: 50rem;
+form > textarea {
+    width: 100%;
+    max-width: 50rem;
     height: 10rem;
     padding: 0.5rem;
     border-radius: 10px;
