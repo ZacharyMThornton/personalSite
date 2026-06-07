@@ -1,194 +1,220 @@
-*{
-    margin:0;
-    padding:0;
+*:root {
+    /* New High-Contrast Dark Color Palette */
+    --canvas-background: #0B0F17;                  /* Clean, deep charcoal-navy canvas */
+    --bg-gradient-start: rgba(18, 24, 38, 1);       /* Subtle depth lifting from center */
+    --bg-gradient-end: rgba(11, 15, 23, 1);
+    
+    --primary-purple: #1A2333;                     /* Dark slate blue for cards/forms */
+    --dark-purple: #111827;                        /* Darker charcoal for nested headers/inputs */
+    --nav-purple-alpha: rgba(15, 23, 42, 0.8);     /* Translucent sleek slate header */
+    
+    --accent-vivid: #2563EB;                       /* Electric blue for hover states */
+    --accent-light: #60A5FA;                       /* Brighter blue accent for highlighted text */
+    --accent-button: #3B82F6;                      /* Solid accessible blue for interactive targets */
+    --link-blueviolet: #60A5FA;                    /* High-contrast blue for inline hyperlinks */
+    --text-white: #F9FAFB;                         /* Off-white to prevent stark eye-strain */
+    --border-white-alpha: rgba(255, 255, 255, 0.08);/* Crisper, subtle structural dividing lines */
+    --shadow-black: rgba(0, 0, 0, 0.6);            /* Deeper ambient drop-shadow for card lift */
+
+    /* Layout & Sizing */
+    --nav-height: 4.75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
     /*z-index: 1;*/
     box-sizing: border-box;
     font-family: "DM Sans";
 }
-:root {
-    --canvas-background: #010117;
-}
-
 
 .dm-sans {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
 }
 
-html{
-    background-color: #010117;
-}
-
-body{
-    margin: 4.75rem 0 0 0; /* nav bar space */
+html {
     background-color: var(--canvas-background);
-    color: white;
-    background-color: #010117;
-    background: radial-gradient(circle, rgba(5, 5, 46, 1) 0%,  rgba(1, 1, 23, 1) 100%);
-    
+}
+
+body {
+    margin: var(--nav-height) 0 0 0; /* nav bar space */
+    color: var(--text-white);
+    background-color: var(--canvas-background);
+    background: radial-gradient(circle, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
 }
 
 a {
     height: 100%;
-    color: blueviolet;
+    color: var(--link-blueviolet);
     text-decoration: none;
 }
 
 /* containers */
 
-.container{
+.container {
     margin: 0 auto;
     padding: 0.5rem;
     width: 90%;
 }
 
 section {
-    scroll-margin-top: 4.75rem;
+    scroll-margin-top: var(--nav-height);
     margin-bottom: 5rem;
 }
 
 /* nav bar */
-nav{
-    background-color: rgba(56, 22, 77, 0.75);
+nav {
+    background-color: var(--nav-purple-alpha);
     backdrop-filter: blur(0.75rem) saturate(150%);
-    height:4rem;
+    height: 4rem;
     width: 100%;
-    position:fixed;
-    top:0;
-    display:flex;
+    position: fixed;
+    top: 0;
+    display: flex;
     flex-direction: row;
     align-items: center;
+    border-bottom: 1px solid var(--border-white-alpha);
 }
 
-nav>a{
+nav>a {
     display: flex;
     align-items: center;
     justify-items: center;
     padding: 10px;
-    
 }
 
-nav>a:hover{
+nav>a:hover {
     transition: 0.25s ease-in;
-    background-color: rgb(111, 27, 190);
-    color:rgb(163, 89, 233);
+    background-color: var(--accent-vivid);
+    color: var(--text-white);
 }
 
-#expand-button{
+#expand-button {
     display: none;
 }
 
-nav>div{
+nav>div {
     width: fit-content;
     margin-left: auto;
     margin-right: 1.5rem;
 }
 
-nav>div>a{
+nav>div>a {
     margin: 0.5rem;
 }
 
-@media screen and (max-width: 600px){
-    nav>a{
+@media screen and (max-width: 600px) {
+    nav>a {
         display: none;
     }
-    #links{
-        position:fixed;
+    #links {
+        position: fixed;
         right: 0;
-        top:20px;
+        top: 20px;
     }
-    nav{
-        background-color: rgba(56, 22, 77, 0.75);
+    nav {
+        background-color: var(--nav-purple-alpha);
         backdrop-filter: blur(0.75rem) saturate(150%);
-        height:fit-content;
+        height: fit-content;
         width: 100%;
-        position:fixed;
-        top:0;
-        display:flex;
+        position: fixed;
+        top: 0;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        
     }
-    #expand-button{
+    #expand-button {
         display: block;
         padding: 0.5rem;
         margin: 0.5rem;
-        border: 1px solid white;
+        border: 1px solid var(--text-white);
         border-radius: 10px;
     }
-    #expand-button:hover{
-        background-color: rgb(111, 27, 190);
+    #expand-button:hover {
+        background-color: var(--accent-vivid);
         transition: 0.15s ease-in;
     }
 }
 
-
 /* headers */
 
-header.banner{
+header.banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 2rem 0;
     padding: 2rem 0;
     width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid var(--border-white-alpha);
 }
 
-header.banner>h1 {
+#banner-text>h1 {
     width: fit-content;
     font-size: 5rem;
     margin-bottom: 1rem;
-    text-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.5);
+    text-shadow: 0.2rem 0.2rem 0.4rem var(--shadow-black);
 }
 
-header.banner>h2 {
+#banner-text>h2 {
     font-size: 1.8rem;
-    text-shadow: 0.2rem 0.2rem 0.4rem rgba(0,0,0,0.5);
+    text-shadow: 0.2rem 0.2rem 0.4rem var(--shadow-black);
 }
 
-section>header{
+section>header {
     font-size: 2rem;
     margin: 1rem 0;
 }
 
+#headshot {
+    height: 30vh;
+    width: auto;
+    border-radius: 10%;
+    margin: 10px;
+    margin-left: 20vw;
+}
+
 /* cards */
 
-.card_container{
+.card_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 1rem;
 }
 
 article.card {
-    background-color: #38164d;
-    box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+    background-color: var(--primary-purple);
+    box-shadow: 0 0 5px 2px var(--shadow-black);
     display: grid;
     grid-template-rows: max-content max-content;
     grid-gap: 0.5rem;
     border-radius: 10px;
     padding: 1.5rem;
+    border: 1px solid var(--border-white-alpha);
 }
 
-article.card.header{
+article.card.header {
     padding: 0.75rem 0.75rem 0 0.75rem;
-    background-color: #291038;
+    background-color: var(--dark-purple);
 }
 
-article.card.content{
+article.card.content {
     padding: 0.75rem;
 }
 
 /* contact form */
 
-#contact{
+#contact {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#form-container{
-    width:90%;
+#form-container {
+    width: 90%;
     display: flex;
     justify-content: center;
 }
@@ -199,17 +225,20 @@ form {
     display: grid;
     grid-template-rows: auto auto auto;
     grid-gap: 0.5rem;
-    background-color: #38164d;
-    box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+    background-color: var(--primary-purple);
+    box-shadow: 0 0 5px 2px var(--shadow-black);
     border-radius: 10px;
-    padding:1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-white-alpha);
 }
-.in{
+.in {
     width: 100%;
     max-width: 15rem;
     padding: 0.5rem;
     border-radius: 10px;
-    border: #291038;
+    border: 1px solid var(--border-white-alpha);
+    background-color: var(--dark-purple);
+    color: var(--text-white);
 }
 form > textarea {
     width: 100%;
@@ -217,25 +246,21 @@ form > textarea {
     height: 10rem;
     padding: 0.5rem;
     border-radius: 10px;
+    border: 1px solid var(--border-white-alpha);
+    background-color: var(--dark-purple);
+    color: var(--text-white);
 }
-form>button{
-    width:10rem;
-    padding:0.5rem;
-    background-color: rgb(138, 43, 226);
+form>button {
+    width: 10rem;
+    padding: 0.5rem;
+    background-color: var(--accent-button);
     border-radius: 10px;
-    border:blueviolet;
-    color: white;
-    
+    border: none;
+    color: var(--text-white);
+    font-weight: 500;
+    cursor: pointer;
 }
-form>button:hover{
-    background-color: rgb(111, 27, 190);
+form>button:hover {
+    background-color: var(--accent-vivid);
     transition: 0.25s ease-in;
 }
-
-
-
-
-
-
-
-

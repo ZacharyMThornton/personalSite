@@ -21,17 +21,20 @@
         <div id="links">
             <a href="https://www.linkedin.com/in/zacharymthornton">LinkedIn</a>
             <a href="https://github.com/ZacharyMThornton">Github</a>
+            <a href="Resume-Zachary-Thornton.pdf" id="resume" download>Resume</a>
         </div>
     </nav>
 
     <div class="container">
         <header class="banner">
-            <h1>Zachary Thornton</h1>
-            <h2>Clarkson University 2028</h2>
-            <br>
-            <h3>Majors: Electrical and Comptuer Engineering &emsp;•&emsp; Minors: Software Engineering and Math</h3>
+            <div id="banner-text">
+                <h1>Zachary Thornton</h1>
+                <h2>Clarkson University 2028</h2>
+                <br>
+                <h3>Electrical and Comptuer Engineering &emsp;|&emsp; GPA: 4.0</h3>
+            </div>
+            <img id="headshot" src="headshot.jpg">
         </header>
-
     </div>
 
     <main>
@@ -81,6 +84,18 @@
                             </p>
                         </div>
                     </article>
+                    <article class="card">
+                        <header>
+                            <h1>IMU C++ driver for a custom PCB</h1>
+                        </header>
+                        <div class="content">
+                            <p>
+                                Developed a C++ hardware abstraction driver for the LSM6DSV 6-axis Inertial Measurement Unit (IMU)
+                                integrated into a custom PCB design. The project involved writing firmware to interface
+                                directly with the sensor's internal registers and validating the communication loop on custom hardware.
+                            </p>
+                        </div>
+                    </article>
                 </div>
             </section>
             <section id="experience">
@@ -88,6 +103,22 @@
                     <h1>Experience</h1>
                 </header>
                 <div class="card_container">
+                    <article class="card">
+                        <header>
+                            <h1>Undergraduate Researcher</h1>
+                        </header>
+                        <div class="content">
+                            <h3>Clarkson University</h3>
+                            <h4>Potsdam NY &emsp;|&emsp; May - August 2026</h4>
+                            <br>
+                            <p>
+                               Focusing on the testing, optimization, and deployment of a compact potentiostat circuit built around an LMP91000 analog front end configured 
+                               with an EFR32BG24 microcontroller. The platform utilizes the MCU's internal IADC and features an LSM6DSV IMU integrated via SPI for synchronized 
+                               motion tracking. Current efforts involve executing calibration protocols and establishing a robust implementation framework to transition the hardware 
+                               into external research applications.
+                            </p>
+                        </div>
+                    </article>
                     <article class="card">
                         <header>
                             <h1>Software Engineering Intern</h1>
@@ -122,9 +153,37 @@
             </section>
             <section id="courseWork">
                 <header>
-                    <h1>Course Work</h1>
+                    <h1>Relevant Coursework</h1>
                 </header>
                 <div class="card_container">
+                    <article class="card">
+                        <header>
+                            <h2>Systems and Signals Processing</h1>
+                        </header>
+                        <div class="content">
+                            <h3>Grade: A</h3>
+                            <br>
+                            <p>
+                            Analyzed continuous and discrete-time signals and systems. Focused on linear time-invariant (LTI) system characterization, 
+                            transfer functions, and frequency-domain analysis using Laplace and Fourier transforms to evaluate system stability and response
+                            </p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <header>
+                            <h2>Embedded Systems</h1>
+                        </header>
+                        <div class="content">
+                            <h3>Grade: A+</h3>
+                            <br>
+                            <p>
+                            Focused on microcontroller architecture, peripheral configuration, and low-level subsystem integration. 
+                            Implemented high-reliability serial communication using SPI and I2C protocols to interface external sensors and analog front ends. 
+                            Optimized internal peripherals—including data converters, timers, and clock management subsystems—to ensure precise hardware control 
+                            and real-time data acquisition.
+                            </p>
+                        </div>
+                    </article>
                     <article class="card">
                         <header>
                             <h2>Digital Design</h1>
