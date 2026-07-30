@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zachary Thornton</title>
+    <title>Zachary Thornton | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,243 +11,304 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <span id="expand-button"><i class="fa-solid fa-list-ul" style="color: #ffffff;"></i></span>
+   <nav>
+    <div class="nav-brand">
+        <a href="#" class="logo">ZT</a>
+        <span id="expand-button"><i class="fa-solid fa-bars"></i></span>
+    </div>
+
+    <div class="nav-links">
         <a href="#">Home</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#courseWork">Course Work</a>
         <a href="#contact">Contact</a>
-        <div id="links">
-            <a href="https://www.linkedin.com/in/zacharymthornton">LinkedIn</a>
-            <a href="https://github.com/ZacharyMThornton">Github</a>
-            <a href="Resume-Zachary-Thornton.pdf" id="resume" download>Resume</a>
-        </div>
-    </nav>
+    </div>
+
+    <div id="links">
+        <a href="https://www.linkedin.com/in/zacharymthornton" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/ZacharyMThornton" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="Resume-Zachary-Thornton.pdf" id="resume" download><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+    </div>
+</nav>
 
     <div class="container">
         <header class="banner">
             <div id="banner-text">
                 <h1>Zachary Thornton</h1>
-                <h2>Clarkson University 2028</h2>
-                <br>
-                <h3>Electrical and Comptuer Engineering &emsp;|&emsp; GPA: 4.0</h3>
+                <h2>Clarkson University '28</h2>
+                <p class="subtitle">Electrical and Computer Engineering &emsp;|&emsp; GPA: 4.0</p>
             </div>
-            <img id="headshot" src="headshot.jpg">
+            <img id="headshot" src="headshot.jpg" alt="Zachary Thornton Headshot">
         </header>
     </div>
 
     <main>
         <div class="container">
+            <!-- Projects Section -->
             <section id="projects">
-                <header>
+                <header class="section-header">
                     <h1>Projects</h1>
                 </header>
                 <div class="card_container">
-                    <article class="card">
-                        <header>
-                            <h1>Linux Kernel Driver - Pressure Sensor</h1>
-                        </header>
-                        <div class="content">
-                            <p>
-                                Built a low-level Linux kernel driver in C++ for a pressure sensor, 
-                                enabling real-time data acquisition and seamless hardware–software integration. 
-                                Implemented kernel-space modules for direct sensor communication, efficient data buffering, 
-                                and user-space transfer, and integrated the driver into a larger embedded monitoring system.
-                            </p>
-                        </div>
+
+                    <!-- Project Card 1 -->
+                    <article class="card project-card">
+                        <img src="Linux.jpg" alt="Linux Kernel Driver" class="project-img">
+                        <details class="card-details">
+                            <summary class="card-summary">
+                                <h2>Linux Kernel Driver - Pressure Sensor</h2>
+                                <i class="fa-solid fa-chevron-down expand-icon"></i>
+                            </summary>
+                            <div class="content">
+                                <p>
+                                    Built a low-level Linux kernel driver in C++ for a pressure sensor, 
+                                    enabling real-time data acquisition and seamless hardware–software integration. 
+                                    Implemented kernel-space modules for direct sensor communication, efficient data buffering, 
+                                    and user-space transfer, and integrated the driver into a larger embedded monitoring system.
+                                </p>
+                            </div>
+                        </details>
                     </article>
-                    <article class="card">
-                        <header>
-                            <h1>IOT Pet Monitoring System</h1>
-                        </header>
-                        <div class="content">
-                            <p>
-                                Designed a networked IoT system for real-time tracking 
-                                of pet food and water levels using microcontroller-based 
-                                sensors and a Python web server for data processing and visualization. 
-                                Built device firmware in C++, integrated a Discord bot with live image updates, 
-                                and incorporated an LLM API for natural, interactive communication.
-                            </p>
-                        </div>
+
+                    <!-- Project Card 2 -->
+                    <article class="card project-card">
+                        <img src="pet_block_diagram.png" alt="IoT Pet Monitor" class="project-img">
+                        <details class="card-details">
+                            <summary class="card-summary">
+                                <h2>IoT Pet Monitoring System</h2>
+                                <i class="fa-solid fa-chevron-down expand-icon"></i>
+                            </summary>
+                            <div class="content">
+                                <p>
+                                    Designed a networked IoT system for real-time tracking 
+                                    of pet food and water levels using microcontroller-based 
+                                    sensors and a Python web server for data processing and visualization. 
+                                    Built device firmware in C++, integrated a Discord bot with live image updates, 
+                                    and incorporated an LLM API for natural, interactive communication.
+                                </p>
+                            </div>
+                        </details>
                     </article>
-                    <article class="card">
-                        <header>
-                            <h1>Face Tracking Robot</h1>
-                        </header>
-                        <div class="content">
-                            <p>
-                                Developed an embedded vision system using OpenCV and a Raspberry Pi to detect and track faces in live video. 
-                                Implemented servo-based camera control for responsive motion tracking, 
-                                integrating computer vision with real-time embedded control for smooth, 
-                                autonomous operation.
-                            </p>
-                        </div>
+
+                    <!-- Project Card 3 -->
+                    <article class="card project-card">
+                        <img src="robot.jpg" alt="Face Tracking Robot" class="project-img">
+                        <details class="card-details">
+                            <summary class="card-summary">
+                                <h2>Face Tracking Robot</h2>
+                                <i class="fa-solid fa-chevron-down expand-icon"></i>
+                            </summary>
+                            <div class="content">
+                                <p>
+                                    Developed an embedded vision system using OpenCV and a Raspberry Pi to detect and track faces in live video. 
+                                    Implemented servo-based camera control for responsive motion tracking, 
+                                    integrating computer vision with real-time embedded control for smooth, 
+                                    autonomous operation.
+                                </p>
+                            </div>
+                        </details>
                     </article>
-                    <article class="card">
-                        <header>
-                            <h1>IMU C++ driver for a custom PCB</h1>
-                        </header>
-                        <div class="content">
-                            <p>
-                                Developed a C++ hardware abstraction driver for the LSM6DSV 6-axis Inertial Measurement Unit (IMU)
-                                integrated into a custom PCB design. The project involved writing firmware to interface
-                                directly with the sensor's internal registers and validating the communication loop on custom hardware.
-                            </p>
-                        </div>
+
+                    <!-- Project Card 4 -->
+                   <!-- Clarkson Potentiostat Research Project Card -->
+                    <article class="card project-card">
+                        <img src="PCB-FRONT.png" alt="Custom Potentiostat Research" class="project-img">
+                        <details class="card-details">
+                            <summary class="card-summary">
+                                <h2>Portable Potentiostat System Optimization</h2>
+                                <i class="fa-solid fa-chevron-down expand-icon"></i>
+                            </summary>
+                            <div class="content">
+                                <p>
+                                    Focused on testing, optimizing, and deploying a compact, portable potentiostat circuit centered around an LMP91000 analog front end and microcontroller data acquisition platform. Executed precision calibration protocols and refined hardware architecture for environmental contaminant screening applications.
+                                </p>
+                                
+                                <div class="poster-action">
+                                    <button type="button" class="poster-btn" onclick="openPosterModal(event)">
+                                        <i class="fa-solid fa-file-pdf"></i> View Research Poster
+                                    </button>
+                                </div>
+                            </div>
+                        </details>
                     </article>
+
+                    <!-- Research Poster Iframe Modal Container -->
+                    <div id="poster-modal" class="modal-overlay" onclick="closePosterModal(event)">
+                        <div class="modal-content" onclick="event.stopPropagation()">
+                            <div class="modal-header">
+                                <h3>Research Poster: Custom Potentiostat Platform</h3>
+                                <button type="button" class="close-btn" onclick="closePosterModal(event)">&times;</button>
+                            </div>
+                            <div class="iframe-container">
+                                <!-- Replace 'research-poster.pdf' with your actual PDF file path -->
+                                <iframe id="poster-iframe" src="research-poster.pdf" title="Clarkson Research Poster"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
+
+            <!-- Experience Section -->
             <section id="experience">
-                <header>
+                <header class="section-header">
                     <h1>Experience</h1>
                 </header>
                 <div class="card_container">
                     <article class="card">
-                        <header>
-                            <h1>Undergraduate Researcher</h1>
-                        </header>
-                        <div class="content">
-                            <h3>Clarkson University</h3>
-                            <h4>Potsdam NY &emsp;|&emsp; May - August 2026</h4>
-                            <br>
-                            <p>
-                               Focusing on the testing, optimization, and deployment of a compact potentiostat circuit built around an LMP91000 analog front end configured 
-                               with an EFR32BG24 microcontroller. The platform utilizes the MCU's internal IADC and features an LSM6DSV IMU integrated via SPI for synchronized 
-                               motion tracking. Current efforts involve executing calibration protocols and establishing a robust implementation framework to transition the hardware 
-                               into external research applications.
-                            </p>
+                        <div class="card-body">
+                            <header>
+                                <h2>Undergraduate Researcher</h2>
+                                <span class="badge">Clarkson University</span>
+                            </header>
+                            <div class="content">
+                                <p class="meta-info">Potsdam, NY &emsp;|&emsp; May – August 2026</p>
+                                <p>
+                                   Focusing on the testing, optimization, and deployment of a compact potentiostat circuit built around an LMP91000 analog front end configured 
+                                   with an EFR32BG24 microcontroller. The platform utilizes the MCU's internal IADC and features an LSM6DSV IMU integrated via SPI for synchronized 
+                                   motion tracking. Current efforts involve executing calibration protocols and establishing a robust implementation framework to transition the hardware 
+                                   into external research applications.
+                                </p>
+                            </div>
                         </div>
                     </article>
+
                     <article class="card">
-                        <header>
-                            <h1>Software Engineering Intern</h1>
-                        </header>
-                        <div class="content">
-                            <h3>Appcast Inc</h3>
-                            <h4>Lebanon NH &emsp;|&emsp; June - August 2025</h4>
-                            <br>
-                            <p>
-                               Developed and maintained internal tooling using Python and SQL to improve operational efficiency 
-                               for the Labs team. Automated business processes, built new data-driven utilities, 
-                               reviewed source code, and produced clear technical documentation to support ongoing 
-                               development and onboarding.
-                            </p>
+                        <div class="card-body">
+                            <header>
+                                <h2>Software Engineering Intern</h2>
+                                <span class="badge">Appcast Inc</span>
+                            </header>
+                            <div class="content">
+                                <p class="meta-info">Lebanon, NH &emsp;|&emsp; June – August 2025</p>
+                                <p>
+                                   Developed and maintained internal tooling using Python and SQL to improve operational efficiency 
+                                   for the Labs team. Automated business processes, built new data-driven utilities, 
+                                   reviewed source code, and produced clear technical documentation to support ongoing 
+                                   development and onboarding.
+                                </p>
+                            </div>
                         </div>
                     </article>
+
                     <article class="card">
-                        <header>
-                            <h1>Statistics Tutor</h1>
-                        </header>
-                        <div class="content">
-                            <h3>River Valley Community College</h3>
-                            <h4>Claremont NH &emsp;|&emsp; June - August 2025</h4>
-                            <br>
-                            <p>Provided individualized support to students across varying proficiency levels, 
-                                creating targeted learning materials and strengthening problem-solving and study skills. 
-                                Fostered a positive, encouraging environment to help students build confidence and improve academic performance.
-                            </p>
+                        <div class="card-body">
+                            <header>
+                                <h2>Statistics Tutor</h2>
+                                <span class="badge">River Valley Community College</span>
+                            </header>
+                            <div class="content">
+                                <p class="meta-info">Claremont, NH &emsp;|&emsp; June – August 2025</p>
+                                <p>
+                                   Provided individualized support to students across varying proficiency levels, 
+                                   creating targeted learning materials and strengthening problem-solving and study skills. 
+                                   Fostered a positive, encouraging environment to help students build confidence and improve academic performance.
+                                </p>
+                            </div>
                         </div>
                     </article>
                 </div>
             </section>
+
+            <!-- Coursework Section -->
             <section id="courseWork">
-                <header>
+                <header class="section-header">
                     <h1>Relevant Coursework</h1>
                 </header>
-                <div class="card_container">
-                    <article class="card">
-                        <header>
-                            <h2>Systems and Signals Processing</h1>
-                        </header>
-                        <div class="content">
-                            <h3>Grade: A</h3>
-                            <br>
-                            <p>
-                            Analyzed continuous and discrete-time signals and systems. Focused on linear time-invariant (LTI) system characterization, 
-                            transfer functions, and frequency-domain analysis using Laplace and Fourier transforms to evaluate system stability and response
-                            </p>
+                <div class="card_container grid-3">
+                    <article class="card coursework-card">
+                        <div class="card-body">
+                            <header>
+                                <h2>Systems & Signals Processing</h2>
+                                <span class="grade">Grade: A</span>
+                            </header>
+                            <div class="content">
+                                <p>
+                                Analyzed continuous and discrete-time signals and systems. Focused on linear time-invariant (LTI) system characterization, 
+                                transfer functions, and frequency-domain analysis using Laplace and Fourier transforms to evaluate system stability and response.
+                                </p>
+                            </div>
                         </div>
                     </article>
-                    <article class="card">
-                        <header>
-                            <h2>Embedded Systems</h1>
-                        </header>
-                        <div class="content">
-                            <h3>Grade: A+</h3>
-                            <br>
-                            <p>
-                            Focused on microcontroller architecture, peripheral configuration, and low-level subsystem integration. 
-                            Implemented high-reliability serial communication using SPI and I2C protocols to interface external sensors and analog front ends. 
-                            Optimized internal peripherals—including data converters, timers, and clock management subsystems—to ensure precise hardware control 
-                            and real-time data acquisition.
-                            </p>
+
+                    <article class="card coursework-card">
+                        <div class="card-body">
+                            <header>
+                                <h2>Embedded Systems</h2>
+                                <span class="grade">Grade: A+</span>
+                            </header>
+                            <div class="content">
+                                <p>
+                                Focused on microcontroller architecture, peripheral configuration, and low-level subsystem integration. 
+                                Implemented high-reliability serial communication using SPI and I2C protocols to interface external sensors and analog front ends.
+                                </p>
+                            </div>
                         </div>
                     </article>
-                    <article class="card">
-                        <header>
-                            <h2>Digital Design</h1>
-                        </header>
-                        <div class="content">
-                            <h3>Grade: A+</h3>
-                            <br>
-                            <p>
-                            An introductory course covering the fundamentals of computer system hardware. Topics included
-                            data representation using number systems and codes, Boolean algebra and logic, digital logic
-                            devices, combinational and sequential circuits, arithmetic logic units and simple processor
-                            organization including registers, memory, addressing and processing of machine instructions.
-                            </p>
+
+                    <article class="card coursework-card">
+                        <div class="card-body">
+                            <header>
+                                <h2>Digital Design</h2>
+                                <span class="grade">Grade: A+</span>
+                            </header>
+                            <div class="content">
+                                <p>
+                                Covered data representation using number systems, Boolean algebra, digital logic devices, 
+                                combinational and sequential circuits, ALUs, and basic processor organization.
+                                </p>
+                            </div>
                         </div>
                     </article>
-                    <article class="card">
-                        <header>
-                            <h2>Object Oriented Programming</h1>
-                        </header>
-                        <div class="content">
-                            <h3>Grade: A+</h3>
-                            <br>
-                            <p>
-                             A thorough introduction to Object Oriented Programming,
-                            including classes, inheritance and subtyping, overloading, and overriding. Dynamic
-                            memory management. Debugging. Introduction to Testing Driven Development.
-                            Introduction to fundamental data structures.
-                            </p>
+
+                    <article class="card coursework-card">
+                        <div class="card-body">
+                            <header>
+                                <h2>Object Oriented Programming</h2>
+                                <span class="grade">Grade: A+</span>
+                            </header>
+                            <div class="content">
+                                <p>
+                                Classes, inheritance, dynamic memory management, debugging, TDD methodologies, and fundamental data structures.
+                                </p>
+                            </div>
                         </div>
                     </article>
-                    <article class="card">
-                        <header>
-                            <h2>Electrical Science</h1>
-                        </header>
-                        <div class="content">
-                            <h3>Grade: A+</h3>
-                            <br>
-                            <p>
-                                Introduced core network concepts and analysis techniques, including DC and AC circuits, 
-                                circuit elements, mesh and nodal methods, and fundamental network theorems. Covered operational 
-                                amplifier behavior, time-domain analysis of first-order circuits, and AC tools such as complex numbers, 
-                                sinusoids, phasors, and RMS values.
-                            </p>
+
+                    <article class="card coursework-card">
+                        <div class="card-body">
+                            <header>
+                                <h2>Electrical Science</h2>
+                                <span class="grade">Grade: A+</span>
+                            </header>
+                            <div class="content">
+                                <p>
+                                Core network analysis (DC/AC), mesh and nodal methods, operational amplifiers, first-order circuits, and phasor calculations.
+                                </p>
+                            </div>
                         </div>
                     </article>
-                    <article class="card">
-                        <header>
-                            <h2>Prob & Stat with Mult Analysis</h1>
-                        </header>
-                        <div class="content">
-                            <h3>Grade: A+</h3>
-                            <br>
-                            <p>
-                                Focused on core probability concepts, random variables and their distributions, expectations, 
-                                and Gaussian processes. Covered joint distributions, correlation, and sums of random variables. 
-                                Introduced essential statistical tools including the central limit theorem, sampling distributions, 
-                                hypothesis testing, likelihood ratios, and maximum likelihood estimation.
-                            </p>
+
+                    <article class="card coursework-card">
+                        <div class="card-body">
+                            <header>
+                                <h2>Probability & Statistics</h2>
+                                <span class="grade">Grade: A+</span>
+                            </header>
+                            <div class="content">
+                                <p>
+                                Random variables, Gaussian processes, joint distributions, Central Limit Theorem, hypothesis testing, and maximum likelihood estimation.
+                                </p>
+                            </div>
                         </div>
                     </article>
                 </div>
             </section>
+
+            <!-- Contact Section -->
             <section id="contact">
-                <header>
+                <header class="section-header">
                     <h1>Contact</h1>
                 </header>
                 <div id="form-container">
@@ -255,16 +316,13 @@
                         <input type="hidden" name="access_key" value="1cf537f1-f481-4691-9d62-1ca868bee264">
                         <input class="in" autocomplete="off" type="text" name="name" placeholder="Your Name" required>
                         <input class="in" autocomplete="off" type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" autocomplete="off" placeholder="Your Message" required></textarea>
-                        <button type="submit">Submit</button>
+                        <textarea name="message" autocomplete="off" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
                     </form>
-                </div>
-               
                 </div>
             </section>
         </div>
     </main>
-
 
     <script src="index.js"></script>
 </body>
